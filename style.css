@@ -58,13 +58,6 @@ header #banner {
   align-items: center;
 }
 
-@media (max-width: 530px) {
-  .container {
-    width: 100%;
-    height: auto;
-    margin: auto 5px;
-  }
-}
 
 main {
   color: aliceblue;
@@ -77,17 +70,7 @@ main {
   grid-template-columns: repeat(2, 1fr);
   row-gap: 40px;
 }
-@media (max-width: 300px) {
-  main {
-    grid-template-rows: repeat(auto-fit, 1fr);
-    grid-template-columns: 1fr;
-  }
-  #editpane .btn {
-    display: block;
-    margin: auto;
-    margin-bottom: 5px;
-  }
-}
+
 
 .vals {
   display: inline-block;
@@ -175,4 +158,23 @@ main .vals input {
 
 .list li:last-child {
   border-style: none;
+}
+
+@media (max-width: 530px) {
+  .container {
+    width: 100%;
+    height: auto;
+    margin: auto 5px;
+  }
+}
+@media (max-width: 300px) {
+  main {
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: 1fr;
+  }
+  #editpane .btn {
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+  }
 }
