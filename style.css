@@ -1,0 +1,178 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body {
+  background: linear-gradient(
+    to left,
+    rgba(92, 55, 255, 0.801),
+    rgb(236, 92, 92)
+  );
+}
+a {
+  text-decoration: none;
+}
+
+header {
+  background-color: rgba(196, 32, 32, 0.664);
+  padding: 15px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+header #banner {
+  font-family: cursive;
+  color: white;
+  font-size: 36px;
+}
+.btn {
+  border-radius: 5px;
+  padding: 10px;
+  width: 100px;
+  background-position:2px ;
+  background-repeat: no-repeat;
+  text-align: right;
+  height: fit-content;
+  border-style: none;
+  outline-style: none;
+  background-color: rgba(25, 25, 168, 0.884);
+  color: white;
+}
+#clear{
+ 
+  background-image: url('./icons/ic_menu_delete.png');
+ 
+}
+#clear:hover {
+  background-color: rgba(92, 92, 226, 0.884);
+}
+
+.container {
+  width: 50%;
+  height: auto;
+  margin: auto;
+  display: flex;
+  flex-flow: column wrap;
+  align-items: center;
+}
+
+@media (max-width: 530px) {
+  .container {
+    width: 100%;
+    height: auto;
+    margin: auto 5px;
+  }
+}
+
+main {
+  color: aliceblue;
+  width: 100%;
+  margin: auto;
+  padding: 10px;
+  box-shadow: 0px 0px 3px 0.5px;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 40px;
+}
+@media (max-width: 300px) {
+  main {
+    grid-template-rows: repeat(auto-fit, 1fr);
+    grid-template-columns: 1fr;
+  }
+  #editpane .btn {
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+  }
+}
+
+.vals {
+  display: inline-block;
+}
+.vals input,
+.vals label {
+  border-radius: 10px;
+  display: block;
+  padding: 5px;
+  width: 80%;
+  margin: auto;
+}
+main .vals input {
+  border-style: none;
+  outline-style: none;
+  border-bottom: 1px solid grey;
+}
+#editpane {
+  grid-column: 1/-1;
+}
+#editpane :not(#addmeal) {
+  display: none;
+}
+#addmeal {
+  background-image: url('./icons/plus\ \(2\).png');
+  background-size: 22px;
+}
+#addmeal:hover {
+  background-color: rgba(92, 92, 226, 0.884);}
+
+#back {
+  background-color: rgb(92, 91, 91);
+  float: right;
+}
+#back:hover {
+  background-color: rgb(175, 173, 173);
+}
+
+#updmeal {
+  background-color:green;
+  width:105px;
+  background-image: url('./icons/16498.png');
+  background-size: 15px;  
+}
+#updmeal:hover {
+  background-color: rgb(92, 170, 105);
+}
+
+#delmeal {
+  background-color: rgb(255, 67, 67);
+  background-image: url('./icons/ic_delete.png');
+  background-size: 18px;  
+}
+#delmeal:hover {
+  background-color: rgb(231, 126, 126);
+}
+
+#totalcal {
+  font-size: 36px;
+  margin: 30px;
+}
+.list {
+  width: 100%;
+  height: 200px;
+  list-style-type: none;
+  box-shadow: 0px 0px 1px 0.5px;
+  overflow-y:auto;
+  
+}
+
+.list li {
+  display: grid;
+  grid-template-columns: max-content 1fr 22px;
+  margin: 2px 5px;
+  padding: 5px;
+  border-bottom: 1px solid grey;
+}
+.list li:hover {
+  background-color: rgba(211, 211, 211, 0.432);
+}
+.list li a{
+  background-image: url('./icons/Pen-icon.png');
+  background-size: cover;
+}
+
+.list li:last-child {
+  border-style: none;
+}
