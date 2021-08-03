@@ -6,11 +6,10 @@ class Storage {
   store(mealdata) {
     if (localStorage.getItem("meals") === null) {
       this.container = [];
-      this.container.push(mealdata);
     } else {
       this.container = JSON.parse(localStorage.getItem("meals"));
-      this.container.push(mealdata);
     }
+    this.container.push(mealdata);
     localStorage.setItem("meals", JSON.stringify(this.container));
   }
 
@@ -244,6 +243,7 @@ const App = (function (ui, itemctr) {
     ui.populate(itemctr.loadmeals());
     setTotalCals();
     ui.clear();
+    ui.hideEditpane();
   };
 
   const deleteMeal = function () {
@@ -252,6 +252,7 @@ const App = (function (ui, itemctr) {
     ui.clear();
     ui.populate(itemctr.loadmeals());
     setTotalCals();
+    ui.hideEditpane();
   };
 
   return {
