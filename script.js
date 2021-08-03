@@ -244,6 +244,7 @@ const App = (function (ui, itemctr) {
     setTotalCals();
     ui.clear();
     ui.hideEditpane();
+    alert("Meal Updated.")
   };
 
   const deleteMeal = function () {
@@ -253,6 +254,7 @@ const App = (function (ui, itemctr) {
     ui.populate(itemctr.loadmeals());
     setTotalCals();
     ui.hideEditpane();
+    alert("Meal Deleted.")
   };
 
   return {
